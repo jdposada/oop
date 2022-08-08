@@ -5,10 +5,6 @@ description: Course Syllabus
 nav_order: 3
 ---
 
-## What you will learn
-
-In this course you will learn the basics of Object Oriented Programming
-
 ## Course Description
 
 In this course we study the concepts on which object oriented programming theory is centered, such as: abstraction, encapsulation, inheritance, and polymorphism, among others. This study of the topics is carried out through a gradual process from the concept of classes and objects to the construction of object-oriented software.

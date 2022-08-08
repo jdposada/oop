@@ -1,5 +1,5 @@
 ---
-title: Week 2 - Introduction to Object Oriented Programming
+title: Week 2 - Attributes and Methods
 ---
 
 August 2 / 3
