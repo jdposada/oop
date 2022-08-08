@@ -1,23 +1,11 @@
 ---
-title: Basic Data Structures
+title: Week 2 - Introduction to Object Oriented Programming
 ---
 
-Oct 5
-: [Linked Lists & Encapsulation](#)
-  : [3.1](#), [2.2](#), [2.3](#)
+August 2 / 3
+: Intro to Python: Dev Environment and Python basics
+  : [Class GitHub](https://github.com/jdposada/oop_202230)
 
-Oct 6
-: **Section**{: .label .label-purple }[Linked Lists](#)
-  : [Solution](#)
-
-Oct 7
-: [Resizing Arrays](#)
-  : [2.4](#), [2.5](#)
-
-Oct 8
-: **Lab**{: .label .label-purple } [Resizing Arrays](#)
-
-Oct 9
-: [Runtime Analysis](#)
-  : [8.1](#), [8.2](#), [8.3](#), [8.4](#)
-: **HW 2 due**{: .label .label-red }
+August 3 / 4
+: **Section**{: .label .label-purple }Intro to Object Oriented Programming: Attributes and Methods
+  : [Slides](https://uninorte-my.sharepoint.com/:p:/g/personal/jposada_uninorte_edu_co/ES0Fh8kZdotFjmD7S_ZmMGsBtXOFL_ieDn-yiiSgzR6Wiw)
