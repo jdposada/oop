@@ -8,7 +8,7 @@ seo:
   name: Object Oriented Programming
 ---
 
-![](assets/images/large-image.jpg)
+![](assets/images/laptop_code.jpg)
 
 # Course Description
 
