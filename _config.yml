@@ -19,7 +19,7 @@ tagline: Intro to Object Oriented Programming
 description: An Intro to Object Oriented Programming
 author: Jose D. Posada
 baseurl: '/oop' # the subpath of your site, e.g. /blog
-url: 'https://https://jdposada.github.io' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://jdposada.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
 # Theme settings
