@@ -3,7 +3,7 @@ title: Week 10
 ---
 
 September 27 / 28
-: E-commerce OOP example: from UML  to Python
+: String, Serialization and File Paths in Python
 
-September 27 / 28
+September 28 / 29
 : **Presentation**{: .label .label-green } Preliminary Project Presentation

@@ -7,5 +7,5 @@ August 16 / 17
   : [Class GitHub](https://github.com/jdposada/oop_202230)
 
 August 17 / 18
-: **Section**{: .label .label-purple } Objects in Python, Packages and Modules
+: **Section**{: .label .label-purple } Inheritance and Polymorphism
   : [Slides](*)

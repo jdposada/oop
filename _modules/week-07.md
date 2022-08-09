@@ -3,8 +3,8 @@ title: Week 7
 ---
 
 September 6 / 7
-: E-commerce OOP example: from UML  to Python
+: Properties and Decorators
 
 September 7 / 8
-: **Section**{: .label .label-purple } Objects in Python, Packages and Modules
+: **Section**{: .label .label-purple } Abstract Base Classes
 

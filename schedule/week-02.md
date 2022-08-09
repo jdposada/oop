@@ -9,7 +9,7 @@ nav_order: 2
 
 ## Assignment
 
-- Get familiar with the local and remote installation by reading the README on our repository[Repository](https://github.com/jdposada/oop_202230)
+- Get familiar with the local and remote installation by reading the README on our [Repository](https://github.com/jdposada/oop_202230)
 -  Read the [Plant UML language specification](https://plantuml.com/class-diagram) for a Class Diagram
 
 ## Learn

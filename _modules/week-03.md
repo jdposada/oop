@@ -3,7 +3,7 @@ title: Week 3
 ---
 
 August 9 / 10
-: Intro to Github and Azure
+: Intro to Github and Azure. Classes and Objects in Python
 
 August 10 / 11
 : **Section**{: .label .label-purple } Encapsulation, Composition and Inheritance
