@@ -4,7 +4,6 @@ title: Week 3
 
 August 9 / 10
 : Intro to Github and Azure
-  : [Class GitHub](https://github.com/jdposada/oop_202230)
 
 August 10 / 11
 : **Section**{: .label .label-purple } Encapsulation, Composition and Inheritance

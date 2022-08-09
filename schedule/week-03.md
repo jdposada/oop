@@ -17,3 +17,5 @@ nav_order: 3
 
 - [Link](https://www.youtube.com/watch?v=lhiH-6ygGl8) with small example of composition
 
+- [Link](https://docs.microsoft.com/en-us/learn/modules/azure-compute-fundamentals/) with Azure Compute Services introduction from Microsoft Learn
+
