@@ -1,5 +1,5 @@
 ---
-title: Week 3 - Encapsulation, Composition and Inheritance
+title: Week 3
 ---
 
 August 9 / 10

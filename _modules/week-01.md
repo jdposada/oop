@@ -1,5 +1,5 @@
 ---
-title: Week 1 - Introduction to Object Oriented Programming
+title: Week 1
 ---
 
 July 26 / 27

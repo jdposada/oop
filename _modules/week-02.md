@@ -1,5 +1,5 @@
 ---
-title: Week 2 - Attributes and Methods
+title: Week 2
 ---
 
 August 2 / 3
