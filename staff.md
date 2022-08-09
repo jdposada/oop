@@ -2,7 +2,7 @@
 layout: page
 title: Staff
 description: Course Staff
-nav_order: 2
+nav_order: 3
 ---
 
 ## Instructors

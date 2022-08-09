@@ -2,7 +2,7 @@
 layout: page
 title: Syllabus
 description: Course Syllabus
-nav_order: 1
+nav_order: 2
 ---
 
 ## Course Description
@@ -118,7 +118,7 @@ Below some links for further reading
 
 When Web is specified the book is availble online through [Uninorte Sibila](https://www.uninorte.edu.co/en/web/biblioteca/biblioteca)
 
-- LOTT, Steven y PHILLIPS, Dusty. Python Object-Oriented Programming: Build robust and maintainable object-oriented Python applications and libraries, Fourth Edition, 2021 [link](https://www.amazon.com/Python-Object-Oriented-Programming-maintainable-object-oriented-ebook-dp-B094DJYLTV/dp/B094DJYLTV/ref=mt_other?_encoding=UTF8&me=&qid=1643818230)
+- **Course TextBook:** LOTT, Steven y PHILLIPS, Dusty. Python Object-Oriented Programming: Build robust and maintainable object-oriented Python applications and libraries, Fourth Edition, 2021 [Amazon link](https://www.amazon.com/Python-Object-Oriented-Programming-maintainable-object-oriented-ebook-dp-B094DJYLTV/dp/B094DJYLTV/ref=mt_other?_encoding=UTF8&me=&qid=1643818230)
 - Kak, Avinash C. Designing with Objects. 1st ed. New York: Wiley, 2014. Web. 
 - Gomaa, Hassan. Software Modeling and Design. Vol. 9780521764148. New York: Cambridge UP, 2011. Web. 
 - Lee, Graham. Modern Programming. Birmingham: Packt, Limited, 2019. Web. 
