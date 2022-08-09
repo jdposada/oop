@@ -21,18 +21,12 @@ It is better if you use Linux OS instead of Windows OS during this course. If yo
 
 ### Below a video with some basics about command line. 
 
-Here some command lines software that runs on your browser. No install needed
+- [Link](https://webvm.io/) for a linux terminal that runs on your browser. *No install needed*
 
-- https://webvm.io/
-
-Below some short tutorial that you may find useful. And you have a no-install terminal to try it!
-
-- https://www.youtube.com/watch?v=cBokz0LTizk
+- [Link](https://www.youtube.com/watch?v=cBokz0LTizk) for a short tutorial that you may find useful. And you have a no-install terminal to try it!
 
 <iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ" > </iframe>
 
-### Here it is a longer one if you want more info. It even has more visits!
+- [Link](https://www.youtube.com/watch?v=ZtqBQ68cfJc) for a longer tutorial if you want more info. It even has more visits!
 
-- https://www.youtube.com/watch?v=ZtqBQ68cfJc
-
-### [A cheat sheet for command line](https://docs.google.com/document/d/195DWljKKKw1dmplrS46DucW4pP9KjoqnN-Yas3sQkLU/edit)
+- [A cheat sheet for command line](https://docs.google.com/document/d/195DWljKKKw1dmplrS46DucW4pP9KjoqnN-Yas3sQkLU/edit)
