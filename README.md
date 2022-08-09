@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Object Oriented Programming 202230
-nav_exclude: true
+nav_exclude: false
 permalink: index.html
 seo:
   type: Course
