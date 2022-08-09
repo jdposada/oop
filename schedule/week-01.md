@@ -11,7 +11,7 @@ nav_order: 2
 
 - Open a [Github](www.github.com) Account with your university email. If you already have one please add the university email. 
 - Request the [Github Student Developer Pack](https://education.github.com/pack)
-- Clone our course Github [Repository](https://github.com/jdposada/oop_202201) and follow the instructions there
+- Clone our course Github [Repository](https://github.com/jdposada/oop_202230) and follow the instructions there
 
 ### Optional
 
@@ -29,7 +29,7 @@ Below some short tutorial that you may find useful. And you have a no-install te
 
 - https://www.youtube.com/watch?v=cBokz0LTizk
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ"> </iframe>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ" > </iframe>
 
 ### Here it is a longer one if you want more info. It even has more visits!
 
