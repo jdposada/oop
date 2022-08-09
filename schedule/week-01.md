@@ -2,10 +2,10 @@
 layout: page
 title: Week 1
 parent: Schedule
-nav_order: 2
+nav_order: 1
 ---
 
-# Introduction to Object Oriented Programming
+# Classes and Objects
 
 ## Assignment
 
@@ -15,7 +15,7 @@ nav_order: 2
 
 ### Optional
 
-It is better if you use Linux OS instead of Windows OS during this course. If you know how to do it attempt to have both installed on your computer. You could also boot linux from a USB or CD following [this instructions](https://ubuntu.com/tutorials/try-ubuntu-before-you-install#1-getting-started) 
+It is better if you use Linux OS instead of Windows OS during this course. If you know how to do it attempt to have both installed on your computer. You could also boot linux from a USB or CD following [these instructions](https://ubuntu.com/tutorials/try-ubuntu-before-you-install#1-getting-started) 
 
 ## Learn
 
