@@ -9,4 +9,4 @@ August 16 / 17
 August 17 / 18
 : **Section**{: .label .label-purple } Inheritance and Polymorphism
   : [Slides]()
-: **Book Chapter**{: .label .label-yellow }: Chapter 3 When Objects Are Alike
+: **Book Chapter**{: .label .label-yellow } Chapter 3 When Objects Are Alike

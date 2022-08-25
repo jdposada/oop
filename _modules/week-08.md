@@ -8,4 +8,4 @@ September 13 / 14
 September 14 / 15
 : **Section**{: .label .label-purple } Intersection of Object-Oriented and Functional Programming
   : [Slides]()
-: **Book Chapter**{: .label .label-yellow }: Chapter 8 The Intersection of Object-Oriented and Functional Programming
+: **Book Chapter**{: .label .label-yellow } Chapter 8 The Intersection of Object-Oriented and Functional Programming
