@@ -1,0 +1,16 @@
+---
+title: "Quarto test install"
+author: "Jose Posada"
+format: beamer
+jupyter: python3
+---
+
+This is a quarto notebook run to ensure everything is installed to render quarto into pdf
+
+```{r}
+print("hello world from R")
+```
+
+```{python}
+print("hello world from Python")
+```

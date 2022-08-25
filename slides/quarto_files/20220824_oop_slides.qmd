@@ -1,0 +1,6 @@
+---
+title: "Inheritance and Polymorphism"
+author: "Jose Posada"
+format: revealjs
+jupyter: python3
+---

@@ -7,3 +7,17 @@ Gemfile.lock
 _site/
 node_modules/
 vendor/
+
+# ignoring R system generated files
+slides/.cache
+slides/.config
+slides/.ipython
+slides/.local
+slides/.bash_history
+slides/.python_history
+slides/.Rhistory
+slides/.sudo_as_admin_successful
+slides/*.html
+slides/*.pdf
+# specific folders
+slides/20220824_oop_slides_files
