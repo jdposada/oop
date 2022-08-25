@@ -19,5 +19,8 @@ slides/.Rhistory
 slides/.sudo_as_admin_successful
 slides/*.html
 slides/*.pdf
+slides/quarto_files/*.html
+slides/quarto_files/*.pdf
 # specific folders
 slides/20220824_oop_slides_files
+slides/quarto_files/20220824_oop_slides_files
