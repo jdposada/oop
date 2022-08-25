@@ -7,3 +7,5 @@ October 4 / 5
 
 October 5 / 6
 : **Section**{: .label .label-purple } The Iterator Pattern
+    : [Slides]()
+: **Book Chapter**{: .label .label-yellow }: Chapter 10 The Iterator Pattern
