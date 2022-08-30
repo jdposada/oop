@@ -3,9 +3,8 @@ title: Week 8
 ---
 
 September 13 / 14
-: **Exam**{: .label .label-yellow } First Partial Exam
+: **Exam**{: .label .label-green } First Partial Exam
 
 September 14 / 15
-: **Section**{: .label .label-purple } Intersection of Object-Oriented and Functional Programming
-  : [Slides]()
-: **Book Chapter**{: .label .label-yellow } Chapter 8 The Intersection of Object-Oriented and Functional Programming
+: **Bonus** {: .label .label-blue } Azure Fundamentals Course
+  : [Link to Enter]() (To be posted)

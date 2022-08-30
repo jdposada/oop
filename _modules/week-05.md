@@ -3,7 +3,7 @@ title: Week 5
 ---
 
 August 16 / 17
-: Introduction to Github
+: Introduction to Version Control on GitHub
   : [Class GitHub](https://github.com/jdposada/oop_202230)
 
 August 17 / 18
