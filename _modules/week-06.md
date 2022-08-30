@@ -3,9 +3,8 @@ title: Week 6
 ---
 
 August 30 / 31
-: Exercise: From UML to Python
-  : [Slides]()
-  : [Code]()
+: Exercise: From UML to Python. **Budget App**
+  : [Code](https://github.com/jdposada/oop_202230/tree/master/src/week06)
 
 August 31 / September 1st
 : **Section**{: .label .label-purple } Exceptions in Python, Properties and Decorators
