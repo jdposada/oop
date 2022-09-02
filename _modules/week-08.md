@@ -7,4 +7,3 @@ September 13 / 14
 
 September 14 / 15
 : **Bonus**{: .label .label-blue } Azure Fundamentals Course
-  : [Link to Enter]() (To be posted)

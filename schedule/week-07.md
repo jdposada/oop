@@ -5,7 +5,7 @@ parent: Schedule
 nav_order: 7
 ---
 
-# Abstract Base Classes
+# Exceptions, Properties, Decorators and Abstract Base Classes
 
 ## Assignments
 
@@ -15,8 +15,8 @@ nav_order: 7
 
 ## Learn
 
-- [OOP Exercises](https://uninorte-my.sharepoint.com/:p:/g/personal/jposada_uninorte_edu_co/ERfI89f8l0RBrvrS54YwQfMBsCiyi7veB058k96dtY2yOQ?e=ZpKe0u). In this link you have 4 examples used last semester during the first partial exam. 
+- [Exceptions](https://www.geeksforgeeks.org/python-exception-handling/)
+- [Decorators](https://www.geeksforgeeks.org/decorators-in-python/)
+- [Property Decorator](https://www.geeksforgeeks.org/python-property-decorator-property/) 
 - [Abstract Base Classes](https://www.geeksforgeeks.org/abstract-classes-in-python/)
 - [Abstract Base Classes Youtube Video](https://youtu.be/TeDlx2Klij0)
-
-
