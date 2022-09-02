@@ -15,6 +15,19 @@ nav_order: 7
 
 ## Learn
 
+The 30% of out book is now digital inside our library. Please use [these](https://uninorte-my.sharepoint.com/:b:/g/personal/jposada_uninorte_edu_co/EQFvl-EEwQZJhanj3S4Sr84B_6HHGe4H6yxjJfG525JCSQ?e=vs6ezx) instructions to access the book. The additional information you need is below
+
+```
+numero de sistema: 146964. 
+
+Título del libro: Python object-oriented programming
+Autores: Lott, Steven F.
+Capítulos digitalizados: 1, 2, 3, 4 y 5.
+
+Disponible para consulta hasta: 15-diciembre-2022. 
+
+```
+
 - [Exceptions](https://www.geeksforgeeks.org/python-exception-handling/)
 - [Decorators](https://www.geeksforgeeks.org/decorators-in-python/)
 - [Property Decorator](https://www.geeksforgeeks.org/python-property-decorator-property/) 
