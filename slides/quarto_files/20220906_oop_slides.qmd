@@ -1,0 +1,356 @@
+---
+title: "Exceptions, Properties and Decorators"
+subtitle: "Object Oriented Programming "
+author: "Jose D. Posada, PhD"
+format:
+  revealjs:
+    #theme: reveal_theme.scss 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/logo_uninorte.png
+    css: styles.css
+    footer: Systems Engineering Program, Universidad del Norte, IST 2110, 202230
+jupyter: python3
+---
+
+## Exceptions
+
+-   It is a special error object that is raised when a normal response is impossible, this is something abnormal prevented the proper execution of the code. Below is an example of a built-in exception if we do something wrong
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+print "hello world"
+```
+
+This is a very common `SyntaxError` because we failed to use parenthesis
+
+## Python Exceptions
+
+All exceptions in python inherit from `BaseException`. There are several built-in exceptions that ar very useful for different cases
+
+-   `ZeroDivisionError`: Raised when the second argument of a division or modulo operation is zero.
+-   `ValueError`: my favorite and very very common
+
+You can find a full list of exceptions and explanations of each one [here](https://docs.python.org/3.9/library/exceptions.html)
+
+## How to raise an exception ourselves
+
+Exceptions are easy called in Python and can be used very similar to a print statement with some prior verification. The example below is extending the base class `list` we want to create a list only with integers and only with even numbers (e.g. 2, 4, 6, etc...)
+
+::: {style="font-size: 0.8em;"}
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class EvenOnly(list[int]):
+    def append(self, value: int) -> None:
+        # isinstance checks whether an element 
+        # has the type we are looking for
+        if not isinstance(value, int):
+            raise TypeError("Only integers can be added")
+            print("This line will never execute")
+        if value % 2 != 0:
+            raise ValueError("Only even numbers can be added")
+        # here super calls the method from the 
+        # class we are inheriting from which is a list
+        super().append(value)
+```
+:::
+
+## How to raise an exception ourselves
+
+When a exception is raised the programs stops its execution
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+e = EvenOnly()
+e.append("a string")
+```
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+e.append(3)
+```
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+e.append(2)
+```
+
+## How to handle an exception
+
+In Python we have the `try` `except` statement. If the code surrounding the `try` statement has an exception the code below the except statement will execute. This behavior is called *catching the exception*
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+# this typing is imported to annotate a function 
+# that can return objects os two different types
+from typing import Union
+
+def funny_division(divisor: float) -> Union[str, float]:
+    try:
+        return 100 / divisor
+    except ZeroDivisionError:
+        return "Zero is not a good idea!"
+
+print(funny_division(5))
+print(funny_division(0))
+```
+
+## Defining our own exceptions
+
+This is very useful to rename the exceptions and fit our particular code. The code below does a simple renaming and overrides the default message
+
+::: {style="font-size: 0.8em;"}
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class NotEven(ValueError):
+  def __init__(self):
+    super().__init__("Not an even Number")
+
+class EvenOnly(list[int]):
+    def append(self, value: int) -> None:
+        if not isinstance(value, int):
+            raise TypeError("Only integers can be added")
+        if value % 2 != 0:
+            raise NotEven()
+        super().append(value)
+
+e = EvenOnly()
+e.append(3)
+```
+:::
+
+# Properties
+
+Properties are attributes. We do not need a `set` or a `get` method to set and get values from an attribute. We can access it directly.
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class ColorPy:
+    def __init__(self, rgb_value: int, name: str) -> None:
+        self.rgb_value = rgb_value
+        self.name = name
+
+c = ColorPy(rgb_value=0xff0000, name="bright red")
+print(c.name)
+```
+
+# Properties
+
+However if we want to check for a condition before setting the attribute it could be useful to create a `set` and a `get` method
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class ColorV:
+    def __init__(self, rgb_value: int, name: str) -> None:
+      self._rgb_value = rgb_value
+      if not name:
+        raise ValueError(f"Invalid name {name!r}")
+      self._name = name
+    
+    def set_name(self, name: str) -> None:
+      if not name:
+        raise ValueError(f"Invalid name {name!r}")
+      self._name = name
+      
+    def get_name(self) -> str:
+      return self._name
+```
+
+## Properties
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+c = ColorV(rgb_value=0xff0000, name="bright red")
+print(c.get_name())
+print(c._name)
+d = ColorV(rgb_value=0xff0000, name="")
+d.set_name("")
+d.set_name("bright red")
+```
+
+## Properties
+
+However in Python we can setup those from the values from other variables. 
+
+::: {style="font-size: 0.8em;"}
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class ColorVP:
+    def __init__(self, rgb_value: int, name: str) -> None:
+        self._rgb_value = rgb_value
+        if not name:
+            raise ValueError(f"Invalid name {name!r}")
+        self._name = name
+
+    def _set_name(self, name: str) -> None:
+        if not name:
+            raise ValueError(f"Invalid name {name!r}")
+        self._name = name
+
+    def _get_name(self) -> str:
+        return self._name
+
+    name = property(_get_name, _set_name)
+```
+:::
+
+Notice that there is no attribute that is actually called `name`. It is created by using the method `property()`
+
+# Property
+
+Let's see what happens and check that we created an attribute called `name`
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+c = ColorVP(0x0000ff, "bright red")
+c.name
+c.name = ""
+```
+# Decorators
+
+Decorators is a feature of Python syntax that allows you to modify the function that they precede. Let's see an example with our `ColorVP` class
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class ColorVP2:
+    def __init__(self, rgb_value: int, name: str) -> None:
+        self._rgb_value = rgb_value
+        if not name:
+            raise ValueError(f"Invalid name {name!r}")
+        self._name = name
+    
+    @property
+    def name(self) -> str:
+      return self._name
+    
+    # now a setter!
+    @name.setter
+    def name(self, name: str) -> None:
+      self._name = name
+```
+
+
+## Decorators
+
+Now let's check if it works the same way
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+c = ColorVP(0x0000ff, "bright red")
+c.name
+c.name = ""
+```
+
+
+## When to use properties
+
+- Use methods to represent actions
+- use attributes or properties to represent the state of an object
+- When computing the attribute is expensive
+
+
+# Expensive attribute
+
+Let's retrieve the content of a webpage
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+from urllib.request import urlopen
+from typing import Optional, cast, List
+class WebPage:
+    def __init__(self, url: str) -> None:
+        self.url = url
+        self._content: Optional[bytes] = None
+
+    @property
+    def content(self) -> bytes:
+        if self._content is None:
+            print("Retrieving New Page...")
+            with urlopen(self.url) as response:
+                self._content = response.read()
+        return self._content
+```
+
+# Expensive attribute
+
+Let's retrieve the content of a webpage
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+ import time
+webpage = WebPage("http://ccphillips.net/")
+now = time.perf_counter()
+content1 = webpage.content
+first_fetch = time.perf_counter() - now
+now = time.perf_counter()
+content2 = webpage.content
+second_fetch = time.perf_counter() - now
+assert content2 == content1, "Problem: Pages were different"
+print(f"Initial Request     {first_fetch:.6f}")
+print(f"Subsequent Requests {second_fetch:.6f}")
+```
+
+
+## S.O.L.I.D. Principles for Classes
+
+- **S**: Single Responsibility: A class should only have one responsibility
+- **O**: Open/Closed: A class should be open to extension but closed to modification
+- **L**: Liskov Substitution: Named after Barbara Liskov. We should be able to replace Objects from a superclass with Objects from the subclass
+- **I**: Interface Segregation: A class should have the smallest interface possible. Classes should be relatively small and isolated
+
+## S.O.L.I.D. Principles for Classes
+
+- **D**: Dependency Inversion: We would like our classes to be independent. 
+  - High-level modules should not depend on low-level modules. Both should depend on abstractions.
+  - Abstractions should not depend on details. Details should depend on abstractions.
+
+TLDR: if we change something in a low level module we should not need to change a lot of code on high level ones
+
+
+## Do not Repeat Yourself Principle
+
+This is one of the most fundamentals principles in programming. Formulated by Andy hunt and Dave Thomas in *The Pragmatic Programmer*. 
+
+You need to be able to:
+
+- Recognize duplication
+- Understand duplication
+- Eliminate it through proper abstraction
+
+This produces cleaner and better code. Every line of code written is a potentials source of **BUGS**. Every line needs to be maintained. 
+
+
