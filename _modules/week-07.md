@@ -11,7 +11,7 @@ September 6 / 7
 : **Book Chapter**{: .label .label-yellow } Chapter 5 When to Use Object-Oriented Programming
 
 September 7 / 8
-: **Section**{: .label .label-purple } Abstract Base Classes
-    : [Slides]()
+: **Section**{: .label .label-purple } Abstract Base Classes and Operator Overloading
+    : [Slides](https://uninorte-my.sharepoint.com/:b:/g/personal/jposada_uninorte_edu_co/EZ5kfYhlw21DmJWIC6fBVGgBT-F-p9hibneZQM-P2ouv4w?e=ofTlHZ)
 : **Book Chapter**{: .label .label-yellow } Chapter 6 Abstract Base Classes and Operator Overloading
 
