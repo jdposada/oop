@@ -25,3 +25,5 @@ slides/quarto_files/*.pdf
 slides/20220824_oop_slides_files
 slides/quarto_files/20220824_oop_slides_files
 slides/quarto_files/20220906_oop_slides_files
+slides/quarto_files/20220907_oop_slides_files
+slides/quarto_files/mypy_test.py
