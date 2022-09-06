@@ -1,0 +1,296 @@
+---
+title: "Abstract Base Classes and operator Overloading"
+subtitle: "Object Oriented Programming "
+author: "Jose D. Posada, PhD"
+format:
+  revealjs:
+    #theme: reveal_theme.scss 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/logo_uninorte.png
+    css: styles.css
+    footer: Systems Engineering Program, Universidad del Norte, IST 2110, 202230
+jupyter: python3
+---
+
+## Abstract Base Classes
+
+We want to specify which attributes and methods a class should have without specifying its functionality. It it like specifying the *carcass*. 
+
+- Concrete Class: in general, they required implementation of methods and attributes
+- Abstract class: They do not implement methods and attributes
+  - Cannot be used by themselves. 
+
+
+## Abstract Base Classes
+
+```{java}
+@startuml
+class "abc.ABC" as abc {}
+
+abstract class BaseClass {
++ {abstract} a_method()
+}
+class ConcreteClass_1 {
++ a_method()
+}
+class ConcreteClass_2 {
++ a_method()
+}
+
+abc <|-- BaseClass
+BaseClass <|-- ConcreteClass_1
+BaseClass <|-- ConcreteClass_2
+@enduml
+```
+
+## Abstract Base Classes
+
+- `abc.ABC`: Python **A**bstract **Base** **C*lasses* [docs](https://docs.python.org/3.9/library/abc.html)
+  - Including this ensures that the classes that inherit from A implement `a_method()`
+- `BaseClass`: the **A** circle means that is abstract
+
+![](images/abc_class.png){fig-align="center"}
+
+## How to create an Abstract Class
+
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+import abc
+class MediaLoader(abc.ABC):
+    @abc.abstractmethod
+    def play(self) -> None:
+        ...
+
+    @property
+    @abc.abstractmethod
+    def ext(self) -> str:
+        ...
+
+MediaLoader.__abstractmethods__
+```
+
+Remember that we can create properties using methods. Here we also chain decorators. The `...` are actual Python code specify that an implementation is required. 
+
+
+## How to create an Abstract Class
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class Wav(MediaLoader):
+  pass
+
+class Ogg(MediaLoader):
+    def __init__(self):
+      self.ext = '.ogg' 
+
+    def play(self) -> None:
+        # this is an implementation taht does nothing!
+        pass
+
+wav = Wav()
+ogg = Ogg()
+```
+
+## Polyhedral Dice Game
+
+We want to build a simulation of games that involve polyhedral dice. These are the dice including 4, 6, 8, 12 and, 20 sides. The 6 die is the conventional one.
+
+![](images/polyhedral_dices.jpg){fig-align="center"}
+
+
+## Polyhedral Dice Game
+
+Let's define the `BaseClass`
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class Die(abc.ABC):
+    def __init__(self) -> None:
+        self.face: int
+        self.roll()
+
+    def __repr__(self) -> str:
+        return f"{self.face}"
+    
+    @abc.abstractmethod
+    def roll(self) -> None:
+        ...
+
+```
+## Polyhedral Dice Game
+
+Let's implement the different classes
+
+::: {style="font-size: 0.8em;"}
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+import random
+class D4(Die):
+    def roll(self) -> None:
+        self.face = random.choice((1, 2, 3, 4))
+class D6(Die):
+    def roll(self) -> None:
+        self.face = random.randint(1, 6)
+class D8(Die):
+    def roll(self) -> None:
+        self.face = int(random.random() * 8)
+        
+d4 = D4()
+print(d4.face)
+d6 = D6()
+print(d6.face)
+d8 = D8()
+print(d8.face)
+```
+:::
+
+## Operator Overloading
+
+Python's operators like `+` and `*` are implemented by special methods on classes. They work by default with the built-in classes. However we could made them work with our own classes as well.
+
+- `__len__()` is called by `len()`
+- `__iter__()` is called by `iter()` and the `for` statement
+- `__contains__()` is call by the `in` operator
+
+## Operator Overloading
+
+Let's check some examples
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+list1 = [3, 6, 8, 9]
+
+print(len(list1))
+print(list1.__len__())
+print("***********")
+print(6 in list1)
+print(list1.__contains__(6))
+```
+## Operator Overloading
+
+Let's overload the addition operator by allowing to add complex numbers. 
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+class complex:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def __add__(self, other):
+        return self.a + other.a, self.b + other.b
+
+Ob1 = complex(1, 2) ; Ob2 = complex(2, 3)
+print(Ob1 + Ob2)
+```
+::: {style="font-size: 0.8em;"}
+This is how is possible to use the `+` operator with strings and integers because each calss implements their own method that is called when the operator is used. 
+Example taken from this [link](https://www.geeksforgeeks.org/operator-overloading-in-python/)
+:::
+
+
+## @overload Decorator
+
+- It is used for typing but it is not functional.
+- The last implementation is what counts. 
+- It helps the type check done by packages such as [mypy](http://www.mypy-lang.org/). 
+- Full documentation of the decorator can be found in this [link](https://docs.python.org/3/library/typing.html#typing.overload)
+
+## @overload Decorator
+
+Let's check a simple example of a simple function definition
+
+::: {style="font-size: 0.8em;"}
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+from typing import overload
+@overload
+def hello(s: int) -> int:
+    ...
+@overload
+def hello(s: str) -> str:
+    ...
+def hello(s):
+    if isinstance(s, int):
+        return "Got an integer!"
+    if isinstance(s, str):
+        return "Got a string"
+    raise ValueError('You must pass either int or str')
+if __name__ == '__main__':
+    print(hello(1))
+    print(hello(1) + 'a')
+    print(hello(1) + 1)
+```
+:::
+
+## @overload Decorator
+
+Let's use mypy to get a smart type checking
+
+```{python}
+#| echo: false
+#| code-line-numbers: false
+#| error: true
+
+code_string = """
+from typing import overload
+
+@overload
+def hello(s: int) -> int:
+    ...
+
+@overload
+def hello(s: str) -> str:
+    ...
+
+def hello(s):
+    if isinstance(s, int):
+        return "Got an integer!"
+    if isinstance(s, str):
+        return "Got a string"
+    raise ValueError('You must pass either int or str')
+
+if __name__ == '__main__':
+    print(hello(1))
+    print(hello(1) + 'a')
+    print(hello(1) + 1)
+"""
+
+with open("/home/rstudio/quarto_files/mypy_test.py", 'w') as f:
+  f.write(code_string)
+
+```
+
+```{python}
+#| echo: true
+#| code-line-numbers: false
+#| error: true
+import subprocess
+result = subprocess.run(['mypy', '/home/rstudio/quarto_files/mypy_test.py'], stdout=subprocess.PIPE)
+print(result.stdout)
+```
+
+Example taken from this [link](https://stackoverflow.com/questions/52034771/overload-decorator-in-typings-module-doesnt-seem-to-behave-as-expected#:~:text=Unfortunately%2C%20python%20does%20not%20allow,different%20combinations%20of%20argument%20types.)
+
+
+## Homework
+
+- [Python Dataclasses](https://www.geeksforgeeks.org/understanding-python-dataclasses/)
+- What is [`collections.Counter`](https://docs.python.org/3.9/library/collections.html#collections.Counter) and how to use it
+
