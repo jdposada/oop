@@ -3,10 +3,9 @@ title: Week 9
 ---
 
 September 20 / 21
-: Abstract Base Classes Practice
 : First Partial Exam Feedback
 
 September 21 / 22
-: **Section**{: .label .label-purple } Intersection of Object-Oriented and Functional Programming
-  : [Slides]()
-: **Book Chapter**{: .label .label-yellow } Chapter 8 The Intersection of Object-Oriented and Functional Programming
+: **Section**{: .label .label-purple } Abstract Base Classes and Operator Overloading
+    : [Slides](https://uninorte-my.sharepoint.com/:b:/g/personal/jposada_uninorte_edu_co/EZ5kfYhlw21DmJWIC6fBVGgBT-F-p9hibneZQM-P2ouv4w?e=ofTlHZ)
+: **Book Chapter**{: .label .label-yellow } Chapter 6 Abstract Base Classes and Operator Overloading

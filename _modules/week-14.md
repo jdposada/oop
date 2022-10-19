@@ -3,7 +3,7 @@ title: Week 14
 ---
 
 October 25 / 26
-: Common Design Pattern Practice: from UML  to Python
+: Common Design Patterns Practice
 
 October 26 / 27
 : **Section**{: .label .label-purple } Advanced Design Patterns Part 1
